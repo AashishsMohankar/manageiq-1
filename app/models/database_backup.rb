@@ -25,7 +25,7 @@ class DatabaseBackup < ApplicationRecord
                                                                                :depot_id => options[:file_depot_id]}
     end
 
-    task = MiqTask.find(options[:task_id])
+    task = MiqTask.find(options[:task_id])RAILS_ENV
     task.update_status("Active", "Ok", "Starting DB Backup for Region: #{region_name}")
 
     schedule_id = options[:miq_schedule_id]

@@ -36,7 +36,6 @@ Thumbs.db
 Procfile
 
 # bin/
-bin/*
 
 # config/
 config/apache
