@@ -2,6 +2,7 @@ class Switch < ApplicationRecord
   include NewWithTypeStiMixin
   include CustomActionsMixin
 
+  belongs_to :host, :inverse_of => :host_virtual_switches
   has_many :host_switches, :dependent => :destroy
   has_many :hosts, :through => :host_switches
 
